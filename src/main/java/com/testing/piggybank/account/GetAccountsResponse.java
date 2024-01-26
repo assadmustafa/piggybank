@@ -10,6 +10,10 @@ public class GetAccountsResponse {
         return accounts;
     }
 
+    public List<AccountResponse> getAccount(long id) {
+        return accounts;
+    }
+
     public void setAccounts(List<AccountResponse> accounts) {
         this.accounts = accounts;
     }

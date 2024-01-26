@@ -62,7 +62,7 @@ public class AccountService {
 
         // Set new balance
         final BigDecimal currentBalance = accountToUpdate.getBalance();
-        final BigDecimal newBalance = currentBalance.add(amountToUpdate);
+        final BigDecimal newBalance = currentBalance;
         accountToUpdate.setBalance(newBalance);
 
         // Save in DB.

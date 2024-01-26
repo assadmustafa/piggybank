@@ -24,6 +24,9 @@ public class Account {
     @Column(name = "userid")
     private long userId;
 
+    public Account() {
+    }
+
     public BigDecimal getBalance() {
         return balance;
     }
@@ -47,4 +50,10 @@ public class Account {
     public long getUserId() {
         return userId;
     }
+
+	public void setId(long accountId) {
+		// TODO Auto-generated method stub
+		this.id = accountId;
+		
+	}
 }

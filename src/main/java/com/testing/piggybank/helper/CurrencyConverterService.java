@@ -23,4 +23,6 @@ public class CurrencyConverterService {
     public BigDecimal toEuro(final Currency chosenCurrency, final BigDecimal amount) {
         return amount;
     }
+
+	
 }

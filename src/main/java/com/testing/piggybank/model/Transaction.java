@@ -19,7 +19,23 @@ public class Transaction {
     @ManyToOne
     private Account receiverAccount;
 
-    @ManyToOne
+    public Transaction(Account receiverAccount, Account senderAccount, String description, BigDecimal amount,
+			Instant dateTime, Currency currency, Status status) {
+
+		this.receiverAccount = receiverAccount;
+		this.senderAccount = senderAccount;
+		this.description = description;
+		this.amount = amount;
+		this.dateTime = dateTime;
+		this.currency = currency;
+		this.status = status;
+	}
+
+	public Transaction() {
+		
+	}
+
+	@ManyToOne
     private Account senderAccount;
 
     @Column(name = "description")
@@ -38,7 +54,8 @@ public class Transaction {
     @Column(name = "status")
     private Status status;
 
-    public long getId() {
+
+	public long getId() {
         return id;
     }
 
